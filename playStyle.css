@@ -1,0 +1,56 @@
+
+:root {
+    --bacground-color: #fff;
+    --primary-color: #578698;
+    --secondary-color: #314a53;
+    --text-color: #5C5C5B;
+    --control-buttons: #FFFAC1;
+
+}
+
+#volumen-less, #volumen-plus{
+    padding: 0;
+    margin: 0;
+}
+
+#play-pause {
+    margin: 0;
+    padding: 0 1vw;
+}
+
+#player-div {
+    position: absolute;
+    padding: 0;
+    z-index: 1;
+    margin: 66vh 0vw  0vh 77vw;;
+    color: var(--control-buttons);
+}
+
+.control:hover{
+    cursor: pointer;
+    color: var(--bacground-color);
+    transform: translateY(-3px);
+    transition-duration: 400ms;
+}
+
+.control:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.control{
+    animation: moveInBottom 2s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

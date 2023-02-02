@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./playStyle.css">
     <title>Document</title>
 </head>
-<body>
-    <header>
-        <h1>TODO LIST</h1>
-    </header>
-    
-    <section>
-        <input type="text" name="taskname" id="taskname" placeholder="Nueva tarea...">
-        <button id="newtaskbutton">+</button>
-    </section>
 
-    <section id="tasksection">
+<body>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bwoSjtjXK5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> -->
+
+
+    <audio src="./music.mp3" id="player" autoplay loop></audio>
+        <div id="player-div">
+            <i id="volumen-less" class="fa-solid fa-minus control"></i>
+            <i id="play-pause" class="fa-solid fa-circle-play control"></i>
+            <i id="volumen-plus" class="fa-solid fa-plus control"></i>
+            
+        </div>
+
     
-    </section>
+
+    <div id="container">
+        <div id="reloj">
+        </div>
+
+        <form id="form">
+            <h1>things to do</h1>
+            <input type="text" name="taskname" id="taskname" placeholder="Nueva tarea...">
+            <i class="fa-solid fa-plus" id="newtaskbutton" type="submit"></i>
+        </form>
+
+        <section id="tasksection">
+
+        </section>
+    </div>
 
     <script src="./script.js"></script>
+    <script src="./player.js"></script>
+    <script src="https://kit.fontawesome.com/31cfd6b5c2.js" crossorigin="anonymous"></script>
+
+
 </body>
+
 </html>
