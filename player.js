@@ -1,34 +1,56 @@
 var player = document.getElementById("player");
-var playPause = document.getElementById("play-pause")
-var volumenLess = document.getElementById("volumen-less")
-var volumenPlus = document.getElementById("volumen-plus")
+var player = document.getElementById("player");
+// var playPause = document.getElementById("play-pause")
+var volumen = document.getElementById("volume-control")
+var icon = document.getElementById("volume-icon")
 var flag = true;
 
-playPause.addEventListener("click", play)
-volumenLess.addEventListener("click", decrease)
-volumenPlus.addEventListener("click", raise)
+volumen.addEventListener("change", setVolumen);
+icon.addEventListener("click", mute)
 
 
-function play(){
-    if(flag == true) {
-        player.pause()
+function mute() {
+    if (flag) {
+        player.volume = 0
+        volumen.value = 0
+
+        icon.removeAttribute("class")
+        
+        icon.classList.add("fa-solid")
+        icon.classList.add("fa-volume-xmark")
+
         flag = false
-    } 
+    }
     else {
-        player.play()
+        player.volume = 0.5
+        volumen.value = 0.5
+
+        icon.removeAttribute("class")
+        
+        icon.classList.add("fa-solid")
+        icon.classList.add("fa-volume-high")
+
         flag = true
     }
-    console.log(player)
-}
-
-function decrease() {
-    
-        player.volume-=0.1
-
     
 }
 
-function raise() {
+function setVolumen(e) {
+    player.volume=volumen.value
+    var sound = player.volume
+
+    icon.removeAttribute("class")
     
-        player.volume+=0.1
+    if(sound == 0){
+        icon.classList.add("fa-solid")
+        icon.classList.add("fa-volume-xmark")
+    }
+    else if(sound > 0 && sound < 0.5){
+        icon.classList.add("fa-solid")
+        icon.classList.add("fa-volume-low")
+    }
+    else if(sound > 0.5 && sound < 1){
+        icon.classList.add("fa-solid")
+        icon.classList.add("fa-volume-high")
+    }
 }
