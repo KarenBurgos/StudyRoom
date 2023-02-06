@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./playStyle.css">
+    <link rel="stylesheet" href="./sounds.css">
     <title>Document</title>
 </head>
 
@@ -14,15 +15,13 @@
     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bwoSjtjXK5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> -->
 
 
-    <audio src="./music.mp3" id="player" autoplay loop></audio>
-        <div id="player-div">
-            <i id="volumen-less" class="fa-solid fa-minus control"></i>
-            <i id="play-pause" class="fa-solid fa-circle-play control"></i>
-            <i id="volumen-plus" class="fa-solid fa-plus control"></i>
-            
-        </div>
+    <audio src="./music.mp3" id="player" loop></audio>
+    <div id="player-div">
+        <i id="volumen-less" class="fa-solid fa-minus control"></i>
+        <i id="play-pause" class="fa-solid fa-circle-play control"></i>
+        <i id="volumen-plus" class="fa-solid fa-plus control"></i>
 
-    
+    </div>
 
     <div id="container">
         <div id="reloj">
@@ -37,6 +36,11 @@
         <section id="tasksection">
 
         </section>
+    </div>
+
+    <div id="sounds">
+        <audio src="./Lluvia.mp3" id="player" autoplay loop></audio>
+        <i class="fa-solid fa-cloud-rain"></i>
     </div>
 
     <script src="./script.js"></script>

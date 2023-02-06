@@ -1,0 +1,18 @@
+:root {
+    --button-color: #b6b6b6;
+    --select-color: #646464;
+}
+
+#sounds {
+    position: absolute;
+    z-index: 2;
+    margin: 15vh 0 0 75vw;
+    border: 1px var(--button-color) solid;
+    padding: 1%;
+    border-radius: 4em;
+    color: var(--button-color)
+}
+
+#sounds :hover {
+    color: var(--select-color)
+}
