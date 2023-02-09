@@ -1,31 +1,61 @@
 
 :root {
-    --bacground-color: #fff;
-    --primary-color: #578698;
-    --secondary-color: #314a53;
-    --text-color: #5C5C5B;
-    --control-buttons: #FFFAC1;
-
+    --control-buttons: #ecf081;
+    --control-hover: #F4F7AC;
+    --control-click: #DFCF40;
 }
 
-#volumen-less, #volumen-plus{
-    padding: 0;
-    margin: 0;
+
+input[type='range'] {
+    overflow: hidden;
+    border-radius: 2rem;
+    -webkit-appearance: none;
+    background-color: var(--control-hover);
 }
 
-#play-pause {
-    margin: 0;
-    padding: 0 1vw;
-}
+input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    margin-top: -1px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 5%;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: -80px 0 0 80px var(--control-click);
+  }
 
+
+  
 #player-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    padding: 0;
-    z-index: 1;
-    margin: 66vh 0vw  0vh 77vw;;
-    color: var(--control-buttons);
+    z-index: 2;
+    margin: 66vh 73vw;
+    position: fixed;
 }
 
+#volume-control::-webkit-slider-thumb{
+    background-color: var(--control-buttons);
+}
+
+#volume-icon{
+    color: var(--control-buttons)
+}
+
+#volume-icon:hover {
+    cursor: pointer;
+    color: var(--control-hover);
+}
+
+#volume-icon:active {
+    color: var(--control-click);
+}
+
+/* 
 .control:hover{
     cursor: pointer;
     color: var(--bacground-color);
@@ -53,4 +83,4 @@
         opacity: 1;
         transform: translateY(0px);
     }
-}
+} */

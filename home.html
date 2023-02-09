@@ -6,46 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/31cfd6b5c2.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./playStyle.css">
     <link rel="stylesheet" href="./sounds.css">
     <title>Document</title>
 </head>
 
 <body>
-    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bwoSjtjXK5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js"
+        integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19"
+        crossorigin="anonymous"></script>
 
+    <div id="container-site">
 
-    <audio src="./music.mp3" id="player" loop></audio>
-    <div id="player-div">
-        <i id="volumen-less" class="fa-solid fa-minus control"></i>
-        <i id="play-pause" class="fa-solid fa-circle-play control"></i>
-        <i id="volumen-plus" class="fa-solid fa-plus control"></i>
+        <div id="container-form">
+            <form id="form">
+                <h1>TODO LIST</h1>
+                <input type="text" name="taskname" id="taskname" placeholder="Nueva tarea...">
+                <i class="fa-solid fa-plus" id="newtaskbutton" type="submit"></i>
+            </form>
 
-    </div>
+            <section id="tasksection"> </section>
 
-    <div id="container">
-        <div id="reloj">
+            <div id="sounds">
+
+                <i class="fa-solid fa-cloud-rain sound">
+                    <audio src="./Lluvia.mp3" id="player" autoplay loop></audio>
+                </i>
+                <i class="fa-solid fa-keyboard sound"></i>
+                <i class="fa-solid fa-wind sound"></i>
+                <i class="fa-solid fa-bolt-lightning sound"></i>
+                <i class="fa-solid fa-clock sound"></i>
+                <i class="fa-solid fa-campfire sound"></i>
+            </div>
         </div>
 
-        <form id="form">
-            <h1>things to do</h1>
-            <input type="text" name="taskname" id="taskname" placeholder="Nueva tarea...">
-            <i class="fa-solid fa-plus" id="newtaskbutton" type="submit"></i>
-        </form>
+        <div id="background">
+            <div id="reloj"> </div>
+            <img src="./fondogris.gif" alt="background study" id="background-img">
+        </div>
 
-        <section id="tasksection">
+        <div id="widget">
+            <div id="calendar">
+                <h2>Febrero</h2>
+                <h3>semana 1</h3>
+                <h3>semana 1</h3>
+                <h3>semana 1</h3>
+                <h3>semana 1</h3>
+                <h3>semana 1</h3>
+            </div>
+            <!-- <div id="player-div">
+                <i id="volume-icon" class="fa-solid fa-volume-high"></i>
+                <input type="range" name="volume" id="volume-control" value="0.5" min="0" max="1" step="0.01">
+            </div> -->
 
-        </section>
+            <div id="player">
+                <audio src="./music.mp3" id="player" loop></audio>
+                <img src="./fondonoche.gif" alt="" id="img-player">
+
+                <i id="volume-icon" class="fa-solid fa-volume-high"></i>
+            </div>
+
+        </div>
     </div>
 
-    <div id="sounds">
-        <audio src="./Lluvia.mp3" id="player" autoplay loop></audio>
-        <i class="fa-solid fa-cloud-rain"></i>
-    </div>
+
+
+
 
     <script src="./script.js"></script>
     <script src="./player.js"></script>
-    <script src="https://kit.fontawesome.com/31cfd6b5c2.js" crossorigin="anonymous"></script>
+
 
 
 </body>

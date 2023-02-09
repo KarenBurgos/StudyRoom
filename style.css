@@ -5,7 +5,7 @@
     --bacground-color: #fff;
     --primary-color: #578698;
     --secondary-color: #314a53;
-    --text-color: #5C5C5B
+    --text-color: #5C5C5B;
 
 }
 
@@ -14,8 +14,8 @@ body {
     background-color: var( --bacground-color);
     background-image: url(./fondo2.gif);
     background-attachment: fixed;
-    background-position: 90%;
-    background-size:50vw;
+    background-position: 95%;
+    background-size:48vw;
     background-repeat: no-repeat;
     color: var(--text-color);
 } 
@@ -23,6 +23,7 @@ body {
 .clock {
     font-size: 4rem;
     color: var(--text-color);
+    position:fixed;
 }
 
 #reloj{
@@ -62,7 +63,7 @@ p {
 }
 
 #tasksection {
-    margin: 0% 20%;
+    margin: 0% 10%;
 }
 
 .container-task {
