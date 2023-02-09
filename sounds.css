@@ -1,18 +1,23 @@
 :root {
     --button-color: #b6b6b6;
-    --select-color: #646464;
+    /* --select-color: #646464; */
 }
 
 #sounds {
-    position: absolute;
-    z-index: 2;
-    margin: 15vh 0 0 75vw;
-    border: 1px var(--button-color) solid;
-    padding: 1%;
-    border-radius: 4em;
-    color: var(--button-color)
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-end;
 }
 
-#sounds :hover {
-    color: var(--select-color)
+.sound {
+    color: var(--button-color);
+    border: #b6b6b6 1px solid;
+    font-size: 1.4vw;
+    padding: 4%;
+    border-radius: 4em;
+    width: 1.3vw;
+    height: 1.3vw;
+    
 }
+
+

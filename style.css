@@ -1,69 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Homemade+Apple&family=Nothing+You+Could+Do&family=Reenie+Beanie&family=Square+Peg&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Homemade+Apple&family=Reenie+Beanie&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 :root {
-    --bacground-color: #fff;
-    --primary-color: #578698;
-    --secondary-color: #314a53;
-    --text-color: #5C5C5B;
+    --bacground-color: #8f99a2;
+    --select-color: #a3adb6;
+    --text-color: #1f2f3e;
+    --light-color: #fff;
 
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
 
-body {
-    background-color: var( --bacground-color);
-    background-image: url(./fondo2.gif);
-    background-attachment: fixed;
-    background-position: 95%;
-    background-size:48vw;
-    background-repeat: no-repeat;
-    color: var(--text-color);
-} 
+body{
+    background-color: var(--bacground-color);
+    font-family: 'Inter', sans-serif;
+}
+
+#container-site {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+#background-img {
+    height: 99vh;
+}
 
 .clock {
-    font-size: 4rem;
+    font-size: 3.5vw;
     color: var(--text-color);
     position:fixed;
 }
 
 #reloj{
-    margin: 27vh 0vw  0vh 61vw;
     position: absolute;
     z-index: 1;
+    margin: 2% 0 0 7%;
 }
-#container{
-    margin: 6vh 55vw 6vh 0vw;
-    background-color: rgba(255, 255, 255, 0.568);
+
+#container-form{
+    margin: 5vh 5vh;
 }
 
 form {
     display: grid;
+    grid-template-columns: 95% 5%;
     justify-content: center;
     align-items: center;
     margin-bottom: 7%;
 }
 
 h1 {
+    background-color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
     grid-column: 1 / span 2;
     grid-row: 1;
-    font-size: 4.7em;
-    color: var(--primary-color);
-    font-family: 'Nothing You Could Do', cursive;
+    font-size: 2.8vw;
+    color: var(--bacground-color);
+    font-family: 'Inter', sans-serif;
     margin-bottom: 1%;
     /* border-style:ridge; */
 }
 
 p {
-    font-size: 1.6rem;
+    font-size: 1.2vw;
     margin: 0% 2%;
     width: 100%;
+    color: var(--text-color);
 }
 
 #tasksection {
-    margin: 0% 10%;
+    margin: 0% 2%;
 }
 
 .container-task {
@@ -73,19 +85,26 @@ p {
 
 i {
     padding: 0% 2%;
-    font-size: 1.5rem;
-}
-
-#tarea{
-    border-radius: 2vw;
+    font-size: 1.2vw;
+    color: var(--text-color);
 }
 
 #taskname {
     padding: 3% 4%;
-    font-size: 1rem;
+    font-size: 1vw;
     border: none;
-    border-bottom: 2px solid var(--secondary-color);
-    width: 25vw;
+    border-bottom: 2px solid var(--text-color);
+    margin: 0 2% 0 1%;
+    background-color: transparent;
+}
+
+#taskname:focus{
+    background-color: #a3adb6;
+    outline: none;
+}
+
+#taskname::placeholder{
+    color: var(--select-color);
 }
 
 
@@ -121,4 +140,27 @@ i {
     width: 19%;
     border-radius: 1rem;
 
+}
+
+#widget{
+    display: grid;
+    grid-template-rows: 30% 70%;
+}
+
+#calendar{
+    margin: 7% 20% 2% 20%;
+    background-color: var(--text-color);
+}
+
+#player {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--text-color);
+    margin: 7% 20% ;
+}
+
+
+#img-player {
+    width: 75%;
 }
