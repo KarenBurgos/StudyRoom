@@ -203,8 +203,9 @@ function editTask(task) {
     editinput.value = nametask.innerText
 
     //hide actual task name
+
     nametask.style.visibility = "hidden";
-    // nametask.style.visibility = "hidden";
+    
     checked.style.visibility = "hidden";
     i.style.visibility = "hidden"
 
@@ -216,12 +217,13 @@ function editTask(task) {
 
     finishbutton.addEventListener("click", function () {
         updateLocalStorage(nametask.textContent, editinput.value)
+        
         nametask.innerText = editinput.value // change new name of tasj
         //delete edit elements
         finishbutton.remove()
         editinput.remove()
         //make new name visible
-        nametask.style.visibility = "visible";
+        nametask.style.visibility = "visible"
         checked.style.visibility = "visible";
         i.style.visibility = "visible"
     })

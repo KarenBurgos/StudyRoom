@@ -6,8 +6,15 @@
     --bacground-color: #8f99a2;
     --select-color: #a3adb6;
     --text-color: #1f2f3e;
+    --song-dark-color: #1d2b38;
+    --song-color: #293d50;
+    --song-light-color: #2d4861;
     --light-color: #fff;
-
+    --range-sound-background: #757c83;
+    --range-sound-pass: rgb(148, 156, 163);
+    --light-grey: #a3adb6;
+    --dark-grey : #5c6268;
+    --hover-light: #c8d4df;
 }
 
 *{
@@ -25,24 +32,33 @@ body{
     grid-template-columns: 33.3% 33.3% 33.3%;
 }
 
+#background {
+    display: grid;
+    grid-template-rows: 20% 80% ;
+    align-items: center;
+    justify-content: center;
+}
+
 #background-img {
-    height: 99vh;
+    height: 100%;
 }
 
 .clock {
     font-size: 3.5vw;
     color: var(--text-color);
-    position:fixed;
 }
 
 #reloj{
-    position: absolute;
-    z-index: 1;
-    margin: 2% 0 0 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
 }
 
 #container-form{
-    margin: 5vh 5vh;
+    display: grid;
+    grid-auto-rows: 15% 60vh 15%;
+    margin: 8vh 8vh 0 8vh;
 }
 
 form {
@@ -50,37 +66,75 @@ form {
     grid-template-columns: 95% 5%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 7%;
+    background-color: var(--select-color);
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
-h1 {
+#h1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
     background-color: var(--text-color);
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    font-size: 2.8vw;
+    border-radius: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5vw;
     color: var(--bacground-color);
     font-family: 'Inter', sans-serif;
-    margin-bottom: 1%;
-    /* border-style:ridge; */
 }
 
 p {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     margin: 0% 2%;
     width: 100%;
     color: var(--text-color);
 }
 
 #tasksection {
-    margin: 0% 2%;
+    padding:  0 5%;
+    overflow-y: auto;
+    background-color: var(--select-color);    
+    border-radius: 0 0 0.5rem 0.5rem;
 }
+
+#tasksection::-webkit-scrollbar {
+    width: 0.7vw;
+}
+  
+
+   #tasksection::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  #tasksection::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  #tasksection::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+   /* Estilos track de scroll */
+   #tasksection::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+  }
+  
+  #tasksection::-webkit-scrollbar-track:hover, 
+  #tasksectionr::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+  
 
 .container-task {
     display: flex;
     margin: 5vh 0vw;
+    overflow-wrap: break-word;
 }
 
 i {
@@ -90,21 +144,16 @@ i {
 }
 
 #taskname {
-    padding: 3% 4%;
+    padding: 3% 7%;
     font-size: 1vw;
     border: none;
     border-bottom: 2px solid var(--text-color);
-    margin: 0 2% 0 1%;
-    background-color: transparent;
+    margin: 0 2% 0 4%;
+    background-color: transparent;    
 }
 
-#taskname:focus{
-    background-color: #a3adb6;
+#taskname:focus {
     outline: none;
-}
-
-#taskname::placeholder{
-    color: var(--select-color);
 }
 
 
@@ -135,32 +184,24 @@ i {
 
 .accept-changes {
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--text-color);
     color: var(--bacground-color);
-    width: 19%;
+    width: auto;
+    height:fit-content;
+    padding: 2%;
     border-radius: 1rem;
 
 }
 
-#widget{
+/* TODO list */
+#widget { 
     display: grid;
-    grid-template-rows: 30% 70%;
-}
-
-#calendar{
-    margin: 7% 20% 2% 20%;
-    background-color: var(--text-color);
-}
-
-#player {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    background-color: var(--text-color);
-    margin: 7% 20% ;
+    grid-template-rows: 40% 60%;
+    margin: 10% 20% 0 20%;
 }
 
 
-#img-player {
-    width: 75%;
+.change {
+    background-color: var(--select-color);
+    height: min-content;
 }
