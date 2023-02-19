@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 :root {
-    --bacground-color: #8f99a2;
+    --bacground-color: #19232e;
     --select-color: #a3adb6;
     --text-color: #1f2f3e;
     --song-dark-color: #1d2b38;
@@ -22,6 +22,14 @@
     padding: 0;
 }
 
+canvas {
+    position: absolute;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+
+
 body{
     background-color: var(--bacground-color);
     font-family: 'Inter', sans-serif;
@@ -30,11 +38,12 @@ body{
 #container-site {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-row: 85%;
 }
 
 #background {
     display: grid;
-    grid-template-rows: 20% 80% ;
+    grid-template-rows: 10% 85% 5%;
     align-items: center;
     justify-content: center;
 }
@@ -204,4 +213,9 @@ i {
 .change {
     background-color: var(--select-color);
     height: min-content;
+}
+
+.hidden {
+    visibility: hidden;
+    transition: 5ms;
 }
