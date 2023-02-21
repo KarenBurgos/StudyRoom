@@ -108,4 +108,5 @@ function addsound(e) {
         default:
             break;
     }
+    item.classList.toggle("selected-sound")
 }

@@ -1,7 +1,7 @@
 #playlist-div {
     display: grid;
     grid-row: 15% 85%;
-    background-color: var(--text-color);
+    background-color: var(--playlist-dark-color);
     border-radius: 0.5em;
     height: 100%;
     max-height: 33vh;
@@ -9,37 +9,34 @@
 
 #songs-section {
     display: inline;
-    overflow-y: auto; 
-       
-    
+    overflow-y: auto;
 }
 
 .song-div {
     display: grid;
-    grid-template-columns: 25% 70%;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: 5vw 10vw;
+    grid-template-rows: 3.5vh 3.5vh;
     margin: 4%;
-    background-color: var(--song-color);
+    background-color: var(--playlist-light-color);
     border-radius: 0.5em;
     cursor: pointer;
 }
 
-h3 {
-    text-align: center;
-    padding: 5%;
-    padding-bottom: 1%;
-    color: var(--bacground-color);
-    font-size: 200%;
+.song-div:first-child {
+    margin-top: 0%;
 }
 
-
-#line {
-    /* TODO: poner la linea de separacion span */
+h3 {
+    text-align: center;
+    margin: 4%;
+    color: var(--primary-color);
+    font-size: 2vw;
 }
 
 .img-playlist {
     grid-row-start: 1;
     grid-row-end: 3;
+    overflow: hidden;
     height: 100%;
     width: 100%;
     border-radius: 0.5em 0 0 0.5em;
@@ -47,59 +44,51 @@ h3 {
 
 .song-name {
     font-size: 100%;
-    color: var(--light-color);
+    color: #afafaf;
     padding-top: 4%;
 }
 
 .artist {
     font-size: 100%;
-    color: var(--bacground-color);
-}
-
-#tasksection {
-    padding:  0 5%;
-    overflow-y: auto;
-    background-color: var(--select-color);    
-    border-radius: 0 0 0.5rem 0.5rem;
+    color: var(--primary-color);
 }
 
 #songs-section::-webkit-scrollbar {
     width: 0.5vw;
-    
 }
-  
 
-   #songs-section::-webkit-scrollbar-thumb {
-    background: var(--song-color);
+#songs-section::-webkit-scrollbar-thumb {
+    background: var(--playlist-light-color);
     border-radius: 4px;
-  }
-  
-  #songs-section::-webkit-scrollbar-thumb:active {
-    background-color: var(--song-light-color)
-  }
-  #songs-section::-webkit-scrollbar-thumb:hover {
-    background: #b3b3b3;
-    background-color: var(--song-light-color)
-  }
-  
-   /* Estilos track de scroll */
-   #songs-section::-webkit-scrollbar-track {
-    background: var(--song-dark-color);
+}
+
+#songs-section::-webkit-scrollbar-thumb:active {
+    background-color: var(--playlist-light-color);
+}
+
+#songs-section::-webkit-scrollbar-thumb:hover {
+    background-color: #0a1d33;
+}
+
+/* Estilos track de scroll */
+#songs-section::-webkit-scrollbar-track {
+    background: #30475f;
     border-radius: 4px;
-  }
-  
-  #songs-section::-webkit-scrollbar-track:hover, 
-  #songs-section::-webkit-scrollbar-track:active {
-    background: var(--song-color);
-  }
+}
+
+#songs-section::-webkit-scrollbar-track:hover,
+#songs-section::-webkit-scrollbar-track:active {
+    background: #476483;
+}
 
 
 #player-div {
+    height: 100%;
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-rows: 60% 15% 15%;
-    background-color: var(--text-color);
+    grid-template-rows: 60% 20% 20%;
+    background-color: var(--playlist-dark-color);
     margin-top: 5%;
     margin-bottom: 5%;
     border-radius: 2%;
@@ -107,30 +96,35 @@ h3 {
 
 #img-player-div {
     overflow: hidden;
-    margin: 2% 10% 5% 10%;
+    margin: 10%;
     display: flex;
     justify-content: center;
     border-radius: 0.5em;
     height: 30vh;
 }
 
-h2 {
+#reloj {
     margin-top: 4%;
-    font-size: 1.4vw;
+    font-size: 1vw;
     color: var(--select-color);
 }
 
-h5 {
+#name-song-player {
+    margin-top: 10%;
+    color: #afafaf;
+}
+
+#artist-song-player {
     margin-top: 1%;
-    color: var(--bacground-color);
+    color: var(--secondary-color);
 }
 
 #song-information-player {
     text-align: center;
 }
 
-
 #play-pause-controls {
+    color: var(--primary-color);
     margin-top: 3%;
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
@@ -147,12 +141,13 @@ h5 {
 }
 
 #volume-icon {
-    color: var(--select-color);
+    color: var(--primary-color);
 }
 
 #volume-input {
+    appearance:none;
     -webkit-appearance: none;
-    background-color: var(--select-color);
+    background-color: red;
     outline: none;
     border-radius: 5rem;
     overflow: hidden;
@@ -163,10 +158,10 @@ h5 {
     width: 1.5vh;
     height: 1.5vh;
     border-radius: 10rem;
-    background-color: var(--range-sound-background);
+    background-color: red;
     border: 0.9vh var(--dark-grey) solid;
     cursor: pointer;
-    box-shadow: -407px 0 0 400px var(--range-sound-background);
+    box-shadow: -407px 0 0 400px black;
 
 }
 

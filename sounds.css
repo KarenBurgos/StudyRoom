@@ -1,42 +1,35 @@
-
 #sounds {
     display: flex;
-    justify-content:space-around;
-    align-items: flex-end;
+    justify-content:center;
+    margin-bottom: 10%;
 }
 
 .sound {
-    color: var(--light-grey);
-    border: var(--light-grey) 1px solid;
+    color: var(--text-color);
+    border: var(--text-color) 1px solid;
     font-size: 1.4vw;
-    padding: 4%;
+    padding: 10%;
     border-radius: 4em;
     width: 1.3vw;
     height: 1.3vw;
+    margin: 7%;
 }
 
-/* .sound:hover {
-    color: var(--hover-light);
-    border: var(--hover-light) 1px solid;
-} */
-
 .sound:hover {
-    
-    color: var(--bacground-color);
-    background-color: var(--hover-light);
-    border: var(--bacground-color) 1px solid;
+    color: var(--primary-color);
+    border: var(--primary-color) 1px solid;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
 .sound:active {
-    background-color: var(--light-grey);
-    cursor: pointer;
     transform: scale(0.90);
     transition: 0.1s ease-in-out;
+    color: var(--text-color);
+    border: var(--text-color) 1px solid;
 }
 
-/* para agregar cuando se de click a un efecto */
-.select-sound { 
-    background-color: var(--light-grey);
-}   
+.selected-sound { 
+    color: var(--bacground-color);
+    background-color: var(--text-color);
+}
