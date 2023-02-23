@@ -1,0 +1,36 @@
+#sounds {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 10%;
+}
+
+.sound {
+    color: var(--text-color);
+    border: var(--text-color) 1px solid;
+    font-size: 1.4vw;
+    padding: 10%;
+    border-radius: 4em;
+    width: 1.3vw;
+    height: 1.3vw;
+    margin: 7%;
+}
+
+.sound:hover {
+    color: var(--primary-color);
+    border: var(--primary-color) 1px solid;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.sound:active {
+    transform: scale(0.90);
+    transition: 0.1s ease-in-out;
+    background-color: var(--playlist-dark-color);;
+    color: var(--text-color);
+    border: var(--playlist-dark-color) 1px solid;
+}
+
+.selected-sound { 
+    color: var(--background-color);
+    background-color: var(--text-color);
+}
