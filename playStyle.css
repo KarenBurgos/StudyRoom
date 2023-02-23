@@ -20,6 +20,9 @@
     background-color: var(--playlist-light-color);
     border-radius: 0.5em;
     cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .song-div:first-child {
@@ -44,6 +47,7 @@ h3 {
 
 .song-name {
     font-size: 100%;
+    
     color: var(--playlist-names);
     padding-top: 4%;
 }
@@ -96,7 +100,7 @@ h3 {
     display: flex;
     justify-content: center;
     border-radius: 0.5em;
-    height: 30vh;
+    height: 100%;
 }
 
 #img-song-player {
@@ -111,17 +115,24 @@ h3 {
     color: var(--select-color);
 }
 
-#name-song-player {
-    margin-top: 10%;
-    color: var(--playlist-names);
-}
+    #name-song-player {
+        margin-top: 10%;
+        margin-left: 15%;
+        color: var(--playlist-names);
+    }
 
-#artist-song-player {
-    margin-top: 1%;
-    color: var(--secondary-color);
-}
+
+    #artist-song-player {
+        margin-top: 1%;
+        margin-left: 15%;
+        color: var(--secondary-color);
+    }
 
 #song-information-player {
+    width: 85%;
+    overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
     text-align: center;
 }
 
@@ -188,3 +199,33 @@ h3 {
 .margin-player {
     margin: 0 9%;
 }
+
+@media only screen and (max-height: 1060px){
+    #img-player-div {
+        height: 85%;
+    }
+
+   #player-div {
+    grid-template-rows: 55% 25% 20%;
+   }
+
+   .song-name {
+    font-size: 2.6vh;
+    color: var(--playlist-names);
+    padding-top: 4%;
+    }
+
+    .artist {
+        font-size: 2vh;
+        color: var(--primary-color);
+    }
+
+    .song-div {
+        
+        grid-template-rows: 4vh 4vh;
+        margin: 6%;
+    }
+
+  }
+
+

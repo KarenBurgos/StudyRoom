@@ -15,6 +15,10 @@ tasksection.addEventListener("click", taskFunctions)
 hide.addEventListener("click", hideElements)
 color.addEventListener("click", changeBackground)
 
+
+var altura = screen.height;
+
+console.log(altura)
 /* ......................... functions ......................... */
 
 function CreateStructutrTask(element) {
@@ -233,14 +237,19 @@ function hideElements() {
         leftcontainer.style.visibility = "visible";
         rightcontainer.style.visibility = "visible";
         animatedBackground.className = "hidden"
-        console.log(hiddenFlag)
+        hide.removeAttribute("class")
+        hide.classList.add("fa-solid")
+        hide.classList.add("fa-eye-slash")
         hiddenFlag = false
     }
     else {
         leftcontainer.style.visibility = "hidden";
         rightcontainer.style.visibility = "hidden";
         animatedBackground.removeAttribute("class")
-        console.log(hiddenFlag)
+        hide.removeAttribute("class")
+        hide.classList.add("fa-solid")
+        hide.classList.add("fa-eye")
+        
         hiddenFlag = true
     }
 }

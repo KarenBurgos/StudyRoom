@@ -69,7 +69,6 @@ body {
 }
 
  #container-site {
-    
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     grid-template-rows: 100vh;
@@ -120,7 +119,7 @@ form {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.8VW;
     grid-column: 1 / span 2;
     text-align: center;
     padding: 5%;
@@ -128,7 +127,7 @@ h1 {
 }
 
 p {
-    font-size: 1.1vw;
+    font-size: 1.3vw;
     margin: 0% 3%;
     width: 100%;
     color: var(--text-color);
@@ -284,4 +283,12 @@ input[type="checkbox"]:checked:after{
 .hidden {
     visibility: hidden;
     transition: 5ms;
+}
+
+
+@media only screen and (max-width: 768px){
+    #container-site {
+        display: flex;
+        flex-direction: column;
+    }
 }
