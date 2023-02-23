@@ -30,6 +30,6 @@
 }
 
 .selected-sound { 
-    color: var(--bacground-color);
+    color: var(--background-color);
     background-color: var(--text-color);
 }

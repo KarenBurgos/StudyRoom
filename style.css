@@ -4,14 +4,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
 :root {
-    --bacground-color: #19232e;
+    --background-color: #19232e;
     --primary-color: #637483;
     --primary-color-lighter: #7a8ea0;
     --secondary-color: #50606e;
     --text-color: #1f2f3e;
+    --scrollbar-thumb-hover: #374858;
+    --scrollbar-thumb-active: #283949;
+    --scrollbar-track: #72889b;
     --playlist-dark-color: #040d17;
     --playlist-light-color: #192c40;
+    --playlist-names: #afafaf;
+    --scrollbar-thumb-playlist-hover: #0a1d33;
+    --scrollbar-track-playlist: #30475f;
 }
+
+.sunset-theme {
+    --background-color: #c2a195;
+    --primary-color: #e5cbc1;
+    --primary-color-lighter: #f0d5cb;
+    --secondary-color: #b69282;
+    --text-color: #9e7766;
+    --scrollbar-thumb-hover: #aa7e6f;
+    --scrollbar-thumb-active: #926a5d;
+    --scrollbar-track: #d1ab9e;
+    --playlist-dark-color: #6f5046;
+    --playlist-light-color: #90695c;
+    --playlist-names: #e5cbc1;
+    --scrollbar-thumb-playlist-hover: #7c584c;
+    --scrollbar-track-playlist: #aa7e6f;
+}
+
+.winter-theme {
+    --background-color: #918daf;
+    --primary-color: #b7b3d3;
+    --primary-color-lighter: #d0cce9;
+    --secondary-color: #6e6a92;
+    --text-color: #464366;
+    --scrollbar-thumb-hover: #59567c;
+    --scrollbar-thumb-active: #464366;
+    --scrollbar-track: #a39ebe;
+    --playlist-dark-color: #292b51;
+    --playlist-light-color: #4c4e78;
+    --playlist-names: #a39ebe;
+    --scrollbar-thumb-playlist-hover: #383b5f;
+    --scrollbar-track-playlist: #6e6a92;
+}
+
 
 * {
     margin: 0;
@@ -26,7 +65,7 @@ canvas {
 
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: var(--bacground-color);
+    background-color: var(--background-color);
 }
 
  #container-site {
@@ -177,24 +216,20 @@ input[type="checkbox"]:checked:after{
 }
 
 #tasksection::-webkit-scrollbar-thumb:hover {
-    background: #677a8a;
+    background: var(--scrollbar-thumb-hover);
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 #tasksection::-webkit-scrollbar-thumb:active {
-    background: #4f5f6b;
+    background: var(--scrollbar-thumb-active);
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 #tasksection::-webkit-scrollbar-track {
-    background: var(--primary-color-lighter);
+    background: var(--scrollbar-track);
     border-radius: 4px;
 }
 
-#tasksection::-webkit-scrollbar-track:hover,
-#tasksectionr::-webkit-scrollbar-track:active {
-    background: #72889b;
-}
 
 .change {
     padding-left: 4%;
@@ -212,7 +247,7 @@ input[type="checkbox"]:checked:after{
 .accept-changes {
     display: flex;
     align-items: center;
-    color: var(--bacground-color);
+    color: var(--background-color);
 }
 
 /* ------------background, clock and visible button ------------- */

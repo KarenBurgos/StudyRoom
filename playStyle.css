@@ -44,7 +44,7 @@ h3 {
 
 .song-name {
     font-size: 100%;
-    color: #afafaf;
+    color: var(--playlist-names);
     padding-top: 4%;
 }
 
@@ -67,18 +67,13 @@ h3 {
 }
 
 #songs-section::-webkit-scrollbar-thumb:hover {
-    background-color: #0a1d33;
+    background-color: var(--scrollbar-thumb-playlist-hover);
 }
 
 /* Estilos track de scroll */
 #songs-section::-webkit-scrollbar-track {
-    background: #30475f;
+    background: var(--scrollbar-track-playlist);
     border-radius: 4px;
-}
-
-#songs-section::-webkit-scrollbar-track:hover,
-#songs-section::-webkit-scrollbar-track:active {
-    background: #476483;
 }
 
 
@@ -88,6 +83,7 @@ h3 {
     justify-content: center;
     align-content: center;
     grid-template-rows: 60% 20% 20%;
+    grid-template-columns: 100%;
     background-color: var(--playlist-dark-color);
     margin-top: 5%;
     margin-bottom: 5%;
@@ -103,6 +99,12 @@ h3 {
     height: 30vh;
 }
 
+#img-song-player {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 #reloj {
     margin-top: 4%;
     font-size: 1vw;
@@ -111,7 +113,7 @@ h3 {
 
 #name-song-player {
     margin-top: 10%;
-    color: #afafaf;
+    color: var(--playlist-names);
 }
 
 #artist-song-player {
@@ -144,24 +146,24 @@ h3 {
     color: var(--primary-color);
 }
 
-#volume-input {
+#volume-control {
     appearance:none;
     -webkit-appearance: none;
-    background-color: red;
+    background-color:var(--primary-color);
     outline: none;
     border-radius: 5rem;
     overflow: hidden;
 }
 
-#volume-input::-webkit-slider-thumb {
+#volume-control::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 1.5vh;
     height: 1.5vh;
     border-radius: 10rem;
-    background-color: red;
+    background-color: var(--scrollbar-thumb-playlist-hover);
     border: 0.9vh var(--dark-grey) solid;
     cursor: pointer;
-    box-shadow: -407px 0 0 400px black;
+    box-shadow: -407px 0 0 400px var(--playlist-light-color);
 
 }
 

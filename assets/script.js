@@ -5,13 +5,15 @@ var tasksection = document.getElementById("tasksection")
 var form = document.getElementById("form");
 var hide = document.getElementById("hide")
 var hiddenFlag = false
-
+var color = document.getElementById("change-color")
+var flagColor = 0;
 /* ..................... event listeners ........................*/
 window.addEventListener("load", showStoragedTasks)
 newtaskbutton.addEventListener("click", AddNewTAsk)
 form.addEventListener("submit", AddNewTAsk)
 tasksection.addEventListener("click", taskFunctions)
 hide.addEventListener("click", hideElements)
+color.addEventListener("click", changeBackground)
 
 /* ......................... functions ......................... */
 
@@ -240,5 +242,34 @@ function hideElements() {
         animatedBackground.removeAttribute("class")
         console.log(hiddenFlag)
         hiddenFlag = true
+    }
+}
+
+
+function changeBackground() {
+    var img = document.getElementById("background-img")
+    flagColor = flagColor + 1
+
+    if (flagColor == 0) {
+        img.removeAttribute("src")
+        img.src = "./fondonight.gif"
+        document.body.removeAttribute("class");
+        img.className = "night"
+    }
+    if(flagColor == 1) {
+        img.removeAttribute("src")
+        img.src = "./atardecer.gif"
+        img.className = "sunset" 
+        document.body.classList.add('sunset-theme');
+        
+        
+    }
+    else if (flagColor == 2) {
+        img.removeAttribute("src")
+        img.src = "./snowbackground.gif"
+        img.className = "snow" 
+        document.body.classList.add('winter-theme');
+
+        flagColor = -1  
     }
 }

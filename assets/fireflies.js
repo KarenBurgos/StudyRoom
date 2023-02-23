@@ -1,3 +1,18 @@
+var buttonChangeBackground = document.getElementById("change-color")
+var color = "#ffeb79"
+buttonChangeBackground.addEventListener("click", changeColor )
+
+function changeColor() {
+  var img = document.getElementById("background-img")
+  if(img.className =="snow")
+    color = "#ffffff"
+  else if(img.className =="sunset")
+    color = "#ffd0c1"
+  else if(img.className =="night")
+    color = "#ffeb79"
+}
+
+
 let c = init("canvas");
 w = canvas.width = window.innerWidth;
 h = canvas.height = window.innerHeight;
@@ -19,7 +34,8 @@ class firefly {
   show() {
     c.beginPath();
     c.arc(this.x, this.y, this.s, 0, 2 * Math.PI);
-    c.fillStyle = "#f9c267";
+    c.fillStyle = color;
+    // fff9ba
     c.fill();
   }
 }
