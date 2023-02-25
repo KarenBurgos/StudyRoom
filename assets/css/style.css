@@ -58,6 +58,8 @@
 }
 
 canvas {
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: -1;
     filter: blur(2px);
@@ -72,6 +74,7 @@ body {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     grid-template-rows: 100vh;
+    height: 100vh;
 }
 
 /* ------------todo list list and background sounds ------------- */
@@ -81,14 +84,18 @@ body {
     grid-template-rows: 90% 10%;
     align-items: center;
     justify-items: center;
+    margin: 10%;
+}
 
+.hide-container {
+    display: none;
 }
 
 #todo-list-section {
     display: flex;
     flex-direction: column;
-    height: 85%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     border-radius: 0.5rem;
     background-color: var(--primary-color);
 }
@@ -121,6 +128,7 @@ form {
 
 ::-webkit-input-placeholder { 
     color: var(--secondary-color); 
+    font-size: 1.1vw;
 } 
 ::-moz-placeholder { 
     color: var(--secondary-color); 
@@ -162,16 +170,25 @@ i {
     padding: 0% 2%;
     font-size: 1.2vw;
     color: var(--text-color);
+    cursor: pointer;
 }
 
 #newtaskbutton {
     font-size: 2.4vw;
+    
+}
+
+#newtaskbutton:hover {
+    color: var(--scrollbar-thumb-playlist-hover);
+}
+
+#newtaskbutton:active {
+    color: var(--playlist-dark-color);
 }
 
 .checked {
     text-decoration: line-through;
 }
-
 
 input[type="checkbox"] {
     appearance: none;
@@ -187,13 +204,14 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: center;
     outline: none;
+    overflow: hidden;
 }
 
 input[type="checkbox"]:after {
     font-family: "Font Awesome 6 Free";
     content: "\f00c";
     font-weight: 900;
-    font-size: 1rem;
+    font-size: 1.5vh;
     color: var(--primary-color);
     background-color: var(--text-color);
     display: none;
@@ -260,6 +278,41 @@ input[type="checkbox"]:checked:after{
     color: var(--background-color);
 }
 
+#sounds {
+    display: flex;
+    justify-content: center;
+    margin-top: 17%;
+}
+
+.sound {
+    color: var(--text-color);
+    border: var(--text-color) 1px solid;
+    font-size: 1.4vw;
+    padding: 10%;
+    border-radius: 4em;
+    width: 1.3vw;
+    height: 1.3vw;
+    margin: 7%;
+}
+
+.sound:hover {
+    color: var(--primary-color);
+    border: var(--primary-color) 1px solid;
+    transition: 0.3s ease-in-out;
+}
+
+.sound:active {
+    transform: scale(0.90);
+    transition: 0.1s ease-in-out;
+    background-color: var(--playlist-dark-color);;
+    color: var(--text-color);
+    border: var(--playlist-dark-color) 1px solid;
+}
+
+.selected-sound { 
+    color: var(--background-color);
+    background-color: var(--text-color);
+}
 /* ------------background, clock and visible button ------------- */
 #background {
     display: grid;
@@ -308,10 +361,6 @@ input[type="checkbox"]:checked:after{
     height: 100vh;
 }
 
-#hide, #change-color {
-    cursor: pointer;
-}
-
 #hide:hover, #change-color:hover {
     color: var(--primary-color);
 }
@@ -320,56 +369,150 @@ input[type="checkbox"]:checked:after{
     color: var(--playlist-dark-color);
 }
 
+.middle {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
 
-/* @media only screen and (max-width: 768px){
+@media screen and (max-width: 960px){
     #container-site {
         display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 60% 3% 40%;
-    }
-
-    #task-done {
-        height: 2.5vw;
-        width: 2vw;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
     }
 
     #left-container {
-        margin-bottom: 0;
-    }
-    #todo-list-section {
-        margin: 0;
-    }
-
-    #reloj {
-        display: none;
-    }
-
-    #background-img {
-        display: none;
-    }
-
-    #animation {
-        margin: 0;
-    }
-
-    h1 {
-        font-size: 5vw;
-    }
-    .task-name{
-        font-size: 2.5vw;
-    }
-    #widget {
         display: grid;
-        margin: 0 10% 0 10%;
+        grid-template-rows: 90% 10%;
+        margin: 10%;
+        margin-bottom: 0;    
+    }
+
+    #todo-list-section {
+        width: 100%;
+        height: 100%;
+    }
+
+    #background {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
     }
 
     i {
-        font-size: 2.5vw;
+        padding: 0% 2%;
+        font-size: 1.7vw;
+        color: var(--text-color);
+        cursor: pointer;
     }
+    
+    #sounds{
+        margin: 0;
+        margin-top: 8%;
+    }
+
+    #newtaskbutton {
+        font-size: 3vw;
+    }
+
+    p {
+        font-size: 1.7vw;
+    }
+
+    input[type="checkbox"] {
+        height: 2.1vw;
+        width: 3vw;
+    }
+
+    #widget {
+        display: flex;
+        margin: 0;
+        margin: 10%; 
+        
+    }
+
+    #background {
+        margin-right: 10%;
+    }
+
+    #background-img {
+        height: 90%;
+        width: 100%;
+        
+    }
+    
+    #canva {
+        height: 100%;
+    }
+    .clock {
+        font-size: 5vw;
+        
+    }
+
 }
 
-@media only screen and (max-width: 530){
-    #playlist-div {
-        display: none;
+@media screen and (max-width:425px){
+    #container-site {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
     }
-} */
+
+    #right-container {
+        height: 20%;
+    }
+    #background {
+        margin: 0 5%;
+        height: 75%;
+    }
+
+    #widget{
+        margin: 15%;
+        margin-top: 0;
+    }
+
+    #player-div {
+        display: grid;
+    }
+    
+    .todo-list-button {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    #reloj {
+        margin-top: 10%;
+        display: grid;
+        grid-template-columns: 95% 5%;
+        flex-direction:row-reverse; 
+    }
+
+    .clock {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: center;
+        font-size: 7vw;
+    }
+
+    #todo-list-button {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        font-size: 5vw;
+    }
+
+    .show {
+        display: grid;
+        position: absolute;
+        z-index: 2;
+    }
+
+    
+
+
+}

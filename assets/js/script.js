@@ -7,8 +7,11 @@ var hide = document.getElementById("hide")
 var hiddenFlag = false
 var color = document.getElementById("change-color")
 var flagColor = 0;
+var width = screen.width
+var height = screen.height
 /* ..................... event listeners ........................*/
 window.addEventListener("load", showStoragedTasks)
+window.addEventListener("load", screenSize)
 newtaskbutton.addEventListener("click", AddNewTAsk)
 form.addEventListener("submit", AddNewTAsk)
 tasksection.addEventListener("click", taskFunctions)
@@ -227,11 +230,16 @@ setInterval(UpdateTime, 1000);
 function hideElements() {
     var leftcontainer = document.getElementById("left-container")
     var rightcontainer = document.getElementById("widget")
+    var middlecontainer = document.getElementById("background")
     var animatedBackground = document.getElementById("canvas")
 
     if (hiddenFlag) {
-        leftcontainer.style.visibility = "visible";
-        rightcontainer.style.visibility = "visible";
+        leftcontainer.style.display ="grid";
+        rightcontainer.style.display = "flex"
+        rightcontainer.style.flexDirection = "column"
+        // leftcontainer.style.visibility = "visible"
+        // rightcontainer.style.visibility = "visible"
+        middlecontainer.classList.remove("middle")
         animatedBackground.className = "hidden"
         hide.removeAttribute("class")
         hide.classList.add("fa-solid")
@@ -239,8 +247,11 @@ function hideElements() {
         hiddenFlag = false
     }
     else {
-        leftcontainer.style.visibility = "hidden";
-        rightcontainer.style.visibility = "hidden";
+        leftcontainer.style.display = "none";
+        rightcontainer.style.display = "none";
+        // leftcontainer.style.visibility = "hidden"
+        // rightcontainer.style.visibility = "hidden"
+        middlecontainer.className="middle"
         animatedBackground.removeAttribute("class")
         hide.removeAttribute("class")
         hide.classList.add("fa-solid")
@@ -277,4 +288,11 @@ function changeBackground() {
 
         flagColor = -1  
     }
+}
+
+
+
+function screenSize() {
+    // if(width =< )
+    console.log(width)
 }

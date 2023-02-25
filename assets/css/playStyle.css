@@ -14,7 +14,7 @@
 
 .song-div {
     display: grid;
-    grid-template-columns: 5vw 10vw;
+    grid-template-columns: 20% 80%;
     grid-template-rows: 3.5vh 3.5vh;
     margin: 4%;
     background-color: var(--playlist-light-color);
@@ -46,15 +46,16 @@ h3 {
 }
 
 .song-name {
-    font-size: 100%;
-    
+    font-size: 1vw;
     color: var(--playlist-names);
     padding-top: 4%;
+    padding-left: 4%;
 }
 
 .artist {
-    font-size: 100%;
+    font-size: 0.8vw;
     color: var(--primary-color);
+    padding-left: 4%;
 }
 
 #songs-section::-webkit-scrollbar {
@@ -90,7 +91,6 @@ h3 {
     grid-template-columns: 100%;
     background-color: var(--playlist-dark-color);
     margin-top: 5%;
-    margin-bottom: 5%;
     border-radius: 2%;
 }
 
@@ -110,32 +110,24 @@ h3 {
     width: 100%;
 }
 
-#reloj {
-    display: grid;
-    justify-content: center;
-    align-self: end;
-    font-size: 1vw;
-    color: var(--select-color);
+#name-song-player {
+    margin-top: 10%;
+    margin-left: 15%;
+    color: var(--playlist-names);
 }
 
-    #name-song-player {
-        margin-top: 10%;
-        margin-left: 15%;
-        color: var(--playlist-names);
-    }
 
-
-    #artist-song-player {
-        margin-top: 1%;
-        margin-left: 15%;
-        color: var(--secondary-color);
-    }
+#artist-song-player {
+    margin-top: 1%;
+    margin-left: 15%;
+    color: var(--secondary-color);
+}
 
 #song-information-player {
     width: 85%;
     overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-align: center;
 }
 
@@ -161,9 +153,10 @@ h3 {
 }
 
 #volume-control {
-    appearance:none;
+    appearance: none;
     -webkit-appearance: none;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
     outline: none;
     border-radius: 5rem;
     overflow: hidden;
@@ -182,7 +175,6 @@ h3 {
 }
 
 .icon-control:hover {
-    cursor: pointer;
     color: var(--range-sound-pass);
 }
 
@@ -207,46 +199,85 @@ h3 {
     background-color: rgba(255, 255, 255, 0.651);
 }
 
-/* @media only screen and (min-height: 1060px){
-    #img-player-div {
-        height: 85%;
-    }
 
-   #player-div {
-    grid-template-rows: 55% 20% 20%;
-   }
-
-   #name-song-player {
-    font-size: 1.5vw
-   }
-   .song-name {
-    color: var(--playlist-names);
-    padding-top: 4%;
-    }
-
-    .artist {
-        font-size: 2vh;
-        color: var(--primary-color);
-    }
-
-    .song-div {
-        grid-template-rows: 4vh 4vh;
-        margin: 6%;
-    }
-
-  } */
-
-  /* @media only screen and (max-width: 768px){
-    
+@media screen and (max-width: 960px){
     #playlist-div {
         display: none;
+    }   
+
+    .show {
+        display: flex;
+        flex-direction: column;
     }
 
-    #player-div {
-        height: 200%;
+    #right-container {
+        margin: 0;
     }
+
+    #player-div{
+        display: grid;
+        grid-template-rows: 60% 15% 25%;
+        width: 100%;
+        height: 100%;
+        margin-top: 0; 
+    }
+
+    #name-song-player {
+        font-size: 2vw;
+        margin-top: 3%;
+    }
+    
+    
+    #artist-song-player {
+        font-size: 1.5vw;
+    }
+
+    #img-player-div{
+        height: 80%;
+    }
+
+    
+    
 }
 
- */
+@media screen and (max-width: 425px) {
+    
+    
+    #player-div {
+        display: grid;
+        grid-template-rows: 25% 75%;
+        grid-template-columns: 30% 70%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5em;
+    }
 
+    #img-player-div {    
+        height: 80%;
+        width: 100%;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 
+    #name-song-player {
+        font-size: 3vw;
+    }
+    
+    #artist-song-player {
+        font-size: 2vw;
+    }
+
+    #img-song-player {
+        height: 100%;
+        width: 100%;
+        margin: 2%;
+    }
+    #song-information-player {
+        margin-top: 15%;
+    }
+
+    i {
+        font-size: 3vw;
+    }
+
+}
