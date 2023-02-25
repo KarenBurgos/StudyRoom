@@ -11,118 +11,119 @@ var volumecontrol = document.getElementById("volume-control")
 var volumeicon = document.getElementById("volume-icon")
 var flagVolume = true; // to control if a song has volume
 var flagPlay = false; // to control if a song is playing
+var img = "assets\\img\\music.png"
 
 var listsongs = [
     {
         "title": "September",
         "artist": "Sparky Deathcap",
-        "src": "./music/september - sparky deathcap.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\september - sparky deathcap.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "Fallen down",
         "artist": "Undertale OST",
-        "src": "./music/fallendown.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\fallendown.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "Chandelier",
         "artist": "Will Paquin",
-        "src": "./music/Paquin - Chandelier.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\Paquin - Chandelier.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "My feelings are fatal",
         "artist": "Mxmtoon",
-        "src": "./music/My feelings are fatal - Mxmtoon.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\My feelings are fatal - Mxmtoon.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "Sweet boy",
         "artist": "Chevy",
-        "src": "./music/Sweet Boi - Chevy.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\Sweet Boi - Chevy.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "Soldier, Poet, king",
         "artist": "The Oh Hellos",
-        "src": "./music/Soldier, Poet, King-The Oh Hellos.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\Soldier, Poet, King-The Oh Hellos.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "First Date",
         "artist": "Frad",
-        "src": "./music/frad - First Date.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\frad - First Date.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "je te laisserai des mots",
         "artist": "Patrick Watson",
-        "src": "./music/je te laisserai des mots.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\je te laisserai des mots.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "Sept 6th",
         "artist": "Kavv",
-        "src": "./music/kavv - Sept 6th.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\kavv - Sept 6th.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "Soldier, Poet, king",
         "artist": "The Oh Hellos",
-        "src": "./music/Soldier, Poet, King-The Oh Hellos.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\Soldier, Poet, King-The Oh Hellos.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "marshmallow",
         "artist": "lukrembo",
-        "src": "./music/lukrembo - marshmallow.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\lukrembo - marshmallow.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "Oblivion",
         "artist": "Rufi-o",
-        "src": "./music/Rufi-o - Oblivion.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\Rufi-o - Oblivion.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "School Rooftop",
         "artist": "hisohkah",
-        "src": "./music/School Rooftop.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\School Rooftop.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "The Lost Ones Weeping",
         "artist": "Vocaloid",
-        "src": "./music/The Lost Ones Weeping - vocaloid.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\The Lost Ones Weeping - vocaloid.mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "Ultimately",
         "artist": "Khai Dreams",
-        "src": "./music/Ultimately - Khai Dreams .mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\Ultimately - Khai Dreams .mp3",
+        "img": img,
         "playing": false
     },
     {
         "title": "Watashi no R",
         "artist": "Vocaloid",
-        "src": "./music/Watashi no R - vocaloid.mp3",
-        "img": "./assets/img/music.png",
+        "src": "music\\Watashi no R - vocaloid.mp3",
+        "img": img,
         "playing": false
     }
 ]
