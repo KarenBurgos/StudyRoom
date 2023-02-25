@@ -63,7 +63,7 @@ var listsongs = [
         "playing": false
     },
     {
-        "title": "je te laisserai des mots asfwefasadsad",
+        "title": "je te laisserai des mots",
         "artist": "Patrick Watson",
         "src": "./music/je te laisserai des mots.mp3",
         "img": "./assets/img/music.png",
