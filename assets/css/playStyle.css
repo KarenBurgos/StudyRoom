@@ -171,7 +171,6 @@ h3 {
     border: 0.9vh var(--dark-grey) solid;
     cursor: pointer;
     box-shadow: -407px 0 0 400px var(--playlist-light-color);
-
 }
 
 .icon-control:hover {
@@ -198,7 +197,6 @@ h3 {
 .playing {
     background-color: rgba(255, 255, 255, 0.651);
 }
-
 
 @media screen and (max-width: 960px){
     #playlist-div {
@@ -227,22 +225,16 @@ h3 {
         margin-top: 3%;
     }
     
-    
     #artist-song-player {
         font-size: 1.5vw;
     }
 
     #img-player-div{
         height: 80%;
-    }
-
-    
-    
+    }   
 }
 
-@media screen and (max-width: 425px) {
-    
-    
+@media screen and (max-width: 425px) {    
     #player-div {
         display: grid;
         grid-template-rows: 25% 75%;
@@ -272,6 +264,7 @@ h3 {
         width: 100%;
         margin: 2%;
     }
+
     #song-information-player {
         margin-top: 15%;
     }
@@ -279,5 +272,4 @@ h3 {
     i {
         font-size: 3vw;
     }
-
 }

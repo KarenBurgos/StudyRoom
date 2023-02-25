@@ -237,8 +237,6 @@ function hideElements() {
         leftcontainer.style.display ="grid";
         rightcontainer.style.display = "flex"
         rightcontainer.style.flexDirection = "column"
-        // leftcontainer.style.visibility = "visible"
-        // rightcontainer.style.visibility = "visible"
         middlecontainer.classList.remove("middle")
         animatedBackground.className = "hidden"
         hide.removeAttribute("class")
@@ -249,8 +247,6 @@ function hideElements() {
     else {
         leftcontainer.style.display = "none";
         rightcontainer.style.display = "none";
-        // leftcontainer.style.visibility = "hidden"
-        // rightcontainer.style.visibility = "hidden"
         middlecontainer.className="middle"
         animatedBackground.removeAttribute("class")
         hide.removeAttribute("class")

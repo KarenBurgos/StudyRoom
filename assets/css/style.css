@@ -87,10 +87,6 @@ body {
     margin: 10%;
 }
 
-.hide-container {
-    display: none;
-}
-
 #todo-list-section {
     display: flex;
     flex-direction: column;
@@ -132,17 +128,18 @@ form {
 } 
 ::-moz-placeholder { 
     color: var(--secondary-color); 
+    font-size: 1.1vw;
 }
 
 h1 {
-    font-size: 2.8VW;
+    font-size: 2.5VW;
     grid-column: 1 / span 2;
     text-align: center;
     padding: 5%;
     color: var(--text-color);
 }
 
-p {
+p.task-name{
     font-size: 1.1vw;
     margin: 0% 3%;
     width: 100%;
@@ -155,13 +152,11 @@ p {
     margin: 3vh 0vw;
     padding: 0 5% 7% 5%;
     overflow-wrap: break-word;
-    border-color: var(--secondary-color);
-    border-style: solid;
+    border: solid var(--secondary-color) ;
     border-width: 0 0 2px 0;
 }
 
 .container-task:first-child {
-    display: flex;
     margin: 0;
     overflow-wrap: break-word;
 }
@@ -174,8 +169,7 @@ i {
 }
 
 #newtaskbutton {
-    font-size: 2.4vw;
-    
+    font-size: 2.4vw;    
 }
 
 #newtaskbutton:hover {
@@ -230,7 +224,6 @@ input[type="checkbox"]:checked:after{
     display: block;
 }
 
-
 #tasksection::-webkit-scrollbar {
     width: 0.7vw;
 }
@@ -255,7 +248,6 @@ input[type="checkbox"]:checked:after{
     border-radius: 4px;
 }
 
-
 .change {
     padding-left: 4%;
     font-family: 'Quicksand', sans-serif;
@@ -265,7 +257,6 @@ input[type="checkbox"]:checked:after{
     color: var(--text-color);
     width: 80%;
     height: 3vh;
-
 }
 
 .change:focus {
@@ -347,7 +338,6 @@ input[type="checkbox"]:checked:after{
 
 .hidden {
     visibility: hidden;
-    transition: 5ms;
 }
 
 /* ----------------- animation backgraound ------------------ */
@@ -356,6 +346,7 @@ input[type="checkbox"]:checked:after{
     justify-content: center;
     margin-bottom: 10%;
 }
+
 #flyme {
     width: 100vw;
     height: 100vh;
@@ -377,6 +368,10 @@ input[type="checkbox"]:checked:after{
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.hide-container {
+    display: none;
 }
 
 @media screen and (max-width: 960px){
@@ -434,7 +429,6 @@ input[type="checkbox"]:checked:after{
         display: flex;
         margin: 0;
         margin: 10%; 
-        
     }
 
     #background {
@@ -443,21 +437,23 @@ input[type="checkbox"]:checked:after{
 
     #background-img {
         height: 90%;
-        width: 100%;
-        
+        width: 100%;   
     }
     
     #canva {
         height: 100%;
     }
+
     .clock {
         font-size: 5vw;
-        
     }
-
 }
 
 @media screen and (max-width:425px){
+    .sound {
+        display: none;
+    }
+
     #container-site {
         display: flex;
         flex-direction: column;
@@ -467,6 +463,7 @@ input[type="checkbox"]:checked:after{
     #right-container {
         height: 20%;
     }
+
     #background {
         margin: 0 5%;
         height: 75%;
@@ -512,7 +509,54 @@ input[type="checkbox"]:checked:after{
         z-index: 2;
     }
 
+    #tasksection {
+        padding: 8%;
+        overflow-y: auto;
+        
+    }
+
+    .container-task {
+        overflow-wrap: break-word;
+}
+
+    #todo-list-section {
+        height: 40vh;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    .task-name {
+        font-size: 3.2vw;
+    }
+
+    input[type="checkbox"] {
+        height: 4vw;
+        width: 5vw;
+    }
+
+    ::-webkit-input-placeholder { 
+        color: var(--secondary-color); 
+        font-size: 2.5vw;
+    }
+
+    ::-moz-placeholder { 
+        color: var(--secondary-color); 
+        font-size: 2.5vw;
+    }
+
+    #taskname {
+        padding: 3%;
+        font-size: 3vw;
+        border-radius: 0.3rem;
+    }
     
+    #newtaskbutton {
+        font-size: 6vw;
+    }
 
-
+    .change {
+        font-size: 2.5vw;
+    }
 }
