@@ -374,6 +374,7 @@ input[type="checkbox"]:checked:after{
     display: none;
 }
 
+/* tablet responsive design */
 @media screen and (max-width: 960px){
     #container-site {
         display: grid;
@@ -432,11 +433,13 @@ input[type="checkbox"]:checked:after{
     }
 
     #background {
+        display: grid;
+        grid-template-rows: 20% 60% 20%;
         margin-right: 10%;
     }
 
     #background-img {
-        height: 90%;
+        height: 100%;
         width: 100%;   
     }
     
@@ -445,6 +448,9 @@ input[type="checkbox"]:checked:after{
     }
 
     .clock {
+        display: grid;
+        justify-content: center;
+        align-self: center;
         font-size: 5vw;
     }
 }
@@ -511,13 +517,12 @@ input[type="checkbox"]:checked:after{
 
     #tasksection {
         padding: 8%;
-        overflow-y: auto;
-        
+        overflow-y: auto;    
     }
 
     .container-task {
         overflow-wrap: break-word;
-}
+    }
 
     #todo-list-section {
         height: 40vh;

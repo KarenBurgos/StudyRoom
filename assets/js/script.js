@@ -228,26 +228,40 @@ setInterval(UpdateTime, 1000);
 
 /* ......................... hide elements ........................*/
 function hideElements() {
-    var leftcontainer = document.getElementById("left-container")
-    var rightcontainer = document.getElementById("widget")
-    var middlecontainer = document.getElementById("background")
+    var todolistContainer = document.getElementById("left-container")
+    var playlistcontainer = document.getElementById("widget")
+    var backgroundcontainer = document.getElementById("background")
     var animatedBackground = document.getElementById("canvas")
 
     if (hiddenFlag) {
-        leftcontainer.style.display ="grid";
-        rightcontainer.style.display = "flex"
-        rightcontainer.style.flexDirection = "column"
-        middlecontainer.classList.remove("middle")
-        animatedBackground.className = "hidden"
-        hide.removeAttribute("class")
-        hide.classList.add("fa-solid")
-        hide.classList.add("fa-eye-slash")
-        hiddenFlag = false
+        if(width <= 425 ) {
+            todolistContainer.style.display ="none";   
+            playlistcontainer.style.display = "flex"
+            playlistcontainer.style.flexDirection = "column"
+            backgroundcontainer.classList.remove("middle")
+            animatedBackground.className = "hidden"
+            hide.removeAttribute("class")
+            hide.classList.add("fa-solid")
+            hide.classList.add("fa-eye-slash")
+            hiddenFlag = false 
+        }
+        else {
+            todolistContainer.style.display ="grid";
+            playlistcontainer.style.display = "flex"
+            playlistcontainer.style.flexDirection = "column"
+            backgroundcontainer.classList.remove("middle")
+            animatedBackground.className = "hidden"
+            hide.removeAttribute("class")
+            hide.classList.add("fa-solid")
+            hide.classList.add("fa-eye-slash")
+            hiddenFlag = false
+        }
+        
     }
     else {
-        leftcontainer.style.display = "none";
-        rightcontainer.style.display = "none";
-        middlecontainer.className="middle"
+        todolistContainer.style.display = "none";
+        playlistcontainer.style.display = "none";
+        backgroundcontainer.className="middle"
         animatedBackground.removeAttribute("class")
         hide.removeAttribute("class")
         hide.classList.add("fa-solid")

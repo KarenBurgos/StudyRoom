@@ -4,15 +4,15 @@ var reloj = document.getElementById("reloj")
 var width = screen.width
 var height = screen.height
 var todolist = document.getElementById("left-container")
+var sounds = document.getElementById("sounds")
 var todoflag = false //..todo list visible
 
 window.addEventListener("load", redesign)
 
 function redesign() {
-    console.log(width)
-    if(width <= 425 )
-    {
+    if(width <= 425 ) {
         todolist.style.display = "none" // hide todo-list section
+        sounds.style.display = "none"
         var todolistbutton = document.createElement("i") // button to show todo-list section
 
         todolistbutton.classList.add("fa-sharp")
@@ -30,7 +30,6 @@ function redesign() {
 
     }
 }
-
 
 function showTodoList() {
     if(todoflag) {
