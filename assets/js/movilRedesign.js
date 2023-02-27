@@ -26,18 +26,26 @@ function redesign() {
         todolist.style.width = "80vw"
         todolist.style.marginTop = "30%"
 
-        reloj.appendChild(todolistbutton) // 
-
+        reloj.appendChild(todolistbutton) 
     }
 }
 
 function showTodoList() {
+    var todolistbutton = document.getElementById("todo-list-button")
+
     if(todoflag) {
         todolist.style.display = "none"
         todoflag = false
+        todolistbutton.removeAttribute("class")
+        todolistbutton.classList.add("fa-sharp")
+        todolistbutton.classList.add("fa-solid")
+        todolistbutton.classList.add("fa-clipboard-list")
     }
     else {
         todolist.style.display = "grid"
         todoflag = true
+        todolistbutton.removeAttribute("class")
+        todolistbutton.classList.add("fa-solid")
+        todolistbutton.classList.add("fa-xmark")
     }
 }

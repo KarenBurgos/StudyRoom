@@ -125,6 +125,14 @@ var listsongs = [
         "src": "music\\Watashi no R - vocaloid.mp3",
         "img": img,
         "playing": false
+    },
+    {
+        "title": "Comfort Chain",
+        "artist": "Instupendo",
+        "src": "music\\Instupendo - Comfort Chain.mp3",
+        "img": img,
+        "playing": false
+        
     }
 ]
 
